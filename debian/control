@@ -14,7 +14,6 @@ Build-Depends:	debhelper (>= 7),
 		openssh-client,
 		python-sqlalchemy,
 		python-unittest2,
-		snakebite,
 		python3-all (>= 3.4),
 		python3-psycopg2,
 		python3-pyparsing,
@@ -36,8 +35,8 @@ Depends: ${shlibs:Depends},
 	 ${misc:Depends},
 	 ${python:Depends},
 	 python-pyparsing,
-	 python-sqlalchemy,
-	 python-mechanize
+	 python-sqlalchemy
+Suggests: python-mechanize, snakebite
 Description: Workflow mgmgt + task scheduling + dependency resolution
 
 Package: luigi-server
