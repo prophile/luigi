@@ -14,9 +14,20 @@ Build-Depends:	debhelper (>= 7),
 		openssh-client,
 		python-sqlalchemy,
 		python-unittest2,
-		snakebite
+		snakebite,
+		python3-all (>= 3.4),
+		python3-psycopg2,
+		python3-pyparsing,
+		python3-setuptools,
+		python3-simplejson,
+		python3-tornado (>= 2.3),
+		python3-mock,
+		python3-daemon,
+		python-sqlalchemy,
+		python-unittest2,
 Standards-Version: 3.7.3
 X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.4
 
 Package: luigi
 Architecture: all
@@ -37,4 +48,24 @@ Depends:	${shlibs:Depends},
 		python-pyparsing,
 		python-sqlalchemy,
 		python-tornado (>= 2.3)
+Description: Luigi central planner server
+
+Package: python3-luigi
+Architecture: all
+Depends: ${shlibs:Depends},
+	 ${misc:Depends},
+	 ${python3:Depends},
+	 python3-pyparsing,
+	 python3-sqlalchemy
+Description: Workflow mgmgt + task scheduling + dependency resolution
+
+Package: python3-luigi-server
+Architecture: all
+Depends:	${shlibs:Depends},
+		${misc:Depends},
+		${python3:Depends},
+		python3-daemon,
+		python3-pyparsing,
+		python3-sqlalchemy,
+		python3-tornado (>= 2.3)
 Description: Luigi central planner server
